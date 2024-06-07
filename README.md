@@ -26,7 +26,7 @@ transactF[IO](ds):
 
 Repositories:
 ```scala
-import magnum.ce.{RepoF, ImmutableRepoF}
+import com.augustnagro.magnum.ce.{RepoF, ImmutableRepoF}
 
 val MyRepo = RepoF[IO, Person.Creator, Person, Person.Id]
 val MyImmutableRepo = ImmutableRepoF[IO, Person, Person.Id]
