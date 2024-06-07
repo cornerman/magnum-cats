@@ -15,13 +15,13 @@ import com.augustnagro.magnum.*
 import com.augustnagro.magnum.ce.*
 
 connectF[IO](ds):
-  sql"SELECT 1".queryF[IO, Int]: IO[Int]
+  sql"SELECT 1".query[Int].runF[IO]: IO[Int]
 
 transactF[IO](ds):
-  sql"UPDATE world SET broken=false".updateF[IO]: IO[Unit]
+  sql"UPDATE world SET broken=false".update.runF[IO]: IO[Int]
 
 transactF[IO](ds):
-  sql"INSERT INTO world(message) VALUES ('hallo') returning message".returningF[IO, String]: IO[Unit]
+  sql"INSERT INTO world(message) VALUES ('hallo') returning message".returning[String].runF[IO]: IO[String]
 ```
 
 Repositories:
