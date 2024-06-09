@@ -27,7 +27,7 @@ lazy val catsEffect = project
   .in(file("cats-effect"))
   .settings(
     name         := "magnum-cats-effect",
-    scalaVersion := "3.4.1",
+    scalaVersion := "3.3.3",
     libraryDependencies ++= Seq(
       "org.typelevel"   %% "cats-effect" % "3.5.4",
       "com.augustnagro" %% "magnum"      % "1.1.1",
